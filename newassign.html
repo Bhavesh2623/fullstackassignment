@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spider-Man Dark Mode</title>
+</head>
+
+<body style="font-family:Arial; text-align:center; padding:40px;">
+
+<h1>🕷️ Spider-Man Theme Toggle</h1>
+
+<h2>Peter Parker</h2>
+
+<p>
+"With great power comes great responsibility."
+</p>
+
+<img 
+src="C:\Users\lucky\Downloads\WhatsApp Image 2026-03-09 at 9.17.47 AM.jpeg"
+width="200"
+style="border-radius:10px;"
+>
+
+<br><br>
+
+<button id="toggleBtn" style="padding:10px 20px; font-size:16px;">
+Toggle Dark Mode
+</button>
+
+<script>
+
+let btn = document.getElementById("toggleBtn");
+
+let theme = localStorage.getItem("theme");
+
+if(theme === "dark"){
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+}
+
+btn.onclick = function(){
+
+    if(document.body.style.backgroundColor === "black"){
+
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        localStorage.setItem("theme","light");
+
+    }else{
+
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        localStorage.setItem("theme","dark");
+    }
+
+}
+
+</script>
+
+</body>
+</html>
